@@ -1,0 +1,17 @@
+div {
+    border: solid black 1px;
+    padding: 20px;
+}
+
+.outer {
+    background-color: red;
+
+}
+
+.middle {
+    background-color: yellow;
+}
+
+.inner {
+    background-color: aqua;
+}

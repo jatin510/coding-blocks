@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <style>
+    #form > form > label {
+      display: flex;
+      flex-wrap: wrap;
+      flex: 1;
+    }
+  </style>
+
+  <body align="center">
+    <h1>Registration Form</h1>
+    <div id="form">
+      <form>
+        <label for="first-name">First name : </label>
+        <input type="text" name="first-name" id="first-name" required />
+        <br /><br />
+        <label for="last-name">Last Name :</label>
+        <input type="text" name="last-name" id="last-name" required />
+        <br /><br />
+        <label for="gender"> Gender : </label>
+        <input
+          type="radio"
+          name="gender"
+          id="gender"
+          value="male"
+          checked
+        />Male
+        <input type="radio" name="gender" id="gender" value="female" /> Female
+        <br /><br />
+        <label for="email"> Email : </label>
+        <input type="email" name="email" />
+        <br /><br />
+        <label for="password"> Password : </label>
+        <input type="password" name="password" id="password" required />
+        <br /><br />
+        <label for="phone"> Phone Number : </label>
+        +91<input type="number" name="phone" id="phone" /> <br /><br />
+        <label for="dob"> Date of birth :</label>
+        <input type="date" required />
+        <br /><br />
+        <label for="year-select"> Year currently studying : </label>
+        <select id="year-select">
+          <option value="">--Please choose an option--</option>
+          <option value="one">1st year</option>
+          <option value="two">2nd year</option>
+          <option value="three">3rd year</option>
+          <option value="four">4th year</option>
+        </select>
+      </form>
+    </div>
+  </body>
+</html>

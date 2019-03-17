@@ -1,0 +1,39 @@
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" />
+  <title>My Page</title>
+</head>
+
+<body>
+  <!-- <h1 align="center">ABOUT ME</h1>
+
+    <h>hello</h> -->
+
+  <input id="input" /> <button id="button" onclick="done()">Go</button>
+  <ul id="list"></ul>
+  <script>
+    function done() {
+      console.log("Enter");
+      var x = document.getElementById("input").value;
+      var li = document.createElement("li");
+      var ul = document.getElementById("list");
+
+
+      if (x % 3 == 0) {
+        li.innerText = "fizz";
+        ul.appendChild(li);
+      } else if (x % 5 == 0) {
+        li.innerText = "Buzz";
+        ul.appendChild(li);
+      } else {
+        li.innerText = x;
+        ul.appendChild(li);
+      }
+    }
+  </script>
+</body>
+
+</html>

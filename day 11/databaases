@@ -1,0 +1,23 @@
+CAP 
+    consistency
+    availability
+    partition tolerance
+
+PACEL
+    if(partition)
+        availability or consistency
+    else
+    Latency or consistency
+
+ACID
+    Atomic      -   2-3 queries together and group them together  then all of them should be true or false
+    Consistent  -   
+    Isolated    -   Lock at table level
+    Durable     -   if power failure then recover automatically
+                    (can make copy before task)
+
+
+BASE
+    Basically Available
+    Soft State
+    Eventually Consistent

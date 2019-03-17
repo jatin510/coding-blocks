@@ -1,0 +1,16 @@
+.alpha,
+.beta {
+  color: red;
+}
+
+div > li {
+  color: blue;
+}
+
+p + p {
+  font-size: 20pt;
+}
+
+div + p {
+  font-family: "Arial";
+}
