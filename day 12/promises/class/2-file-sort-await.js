@@ -29,7 +29,13 @@ async function sort() {
 }
 
 console.log('sort started')
-sort().then((x) => {
-   console.log('really really done ' + x)
-})
+
+sort()
+   .then((x) => {
+      console.log('really really done ' + x)
+   })
+   .catch(
+      console.log('error')
+   )
+
 console.log('sort ended')
