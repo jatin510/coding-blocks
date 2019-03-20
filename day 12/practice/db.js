@@ -2,24 +2,16 @@ const Sequelize = require('sequelize')
 
 const db = new Sequelize({
    dialect: 'sqlite',
-   // when using sqlite
-   storage: __dirname + '/tasks.db',
-
-   // for mysql/postgres/mssql
-   host: '',
-   username: '',
-   password: '',
-   database: ''
+   storage: __dirname + 'tasks.db'
 })
 
 const Tasks = db.define('task', {
-
    name: {
-      type: Sequelize.STRING(100),
+      type: Sequelize.STRING(500),
       allowNull: false
    },
    description: {
-      type: Sequelize.TEXT,
+      type: Sequelize.TEXT
    },
    done: {
       type: Sequelize.BOOLEAN,
@@ -27,6 +19,7 @@ const Tasks = db.define('task', {
       defaultValue: false
    }
 })
+
 
 module.exports = {
    db,
