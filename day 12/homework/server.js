@@ -16,7 +16,6 @@ app.use(express.urlencoded({
 app.use('/todo-list', express.static(__dirname + '/public'))
 
 
-
 db.sync()
    .then(() => {
       app.listen(5100, () => {
