@@ -2,26 +2,27 @@ const Sequelize = require('sequelize')
 
 const db = new Sequelize({
    dialect: 'sqlite',
-   storage: __dirname + '/tasks.db'
+   storage: __dirname + 'database.db'
 })
 
-const Tasks = db.define('task', {
+const List = db.define('list', {
    name: {
-      type: Sequelize.STRING(500),
+      type: Sequelize.STRING(100),
       allowNull: false
    },
    description: {
-      type: Sequelize.TEXT
+      type: Sequelize.TEXT,
+      allowNull: false
    },
    done: {
       type: Sequelize.BOOLEAN,
       allowNull: false,
       defaultValue: false
    }
-})
 
+})
 
 module.exports = {
    db,
-   Tasks
+   List
 }

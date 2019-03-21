@@ -5,7 +5,7 @@ const {
    Tasks
 } = require('./db')
 
-const app = expres()
+const app = express()
 
 app.use(express.json())
 app.use(express.urlencoded({
@@ -40,7 +40,7 @@ app.get('/todos', async (req, res) => {
 
 db.sync()
    .then(() => {
-      app.listen(1500, () => {
+      app.listen(4500, () => {
          console.log('server started')
       })
    })
