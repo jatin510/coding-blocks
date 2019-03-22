@@ -2,10 +2,11 @@ const Sequelize = require('sequelize')
 
 const db = new Sequelize({
    dialect: 'sqlite',
-   storage: __dirname + 'database.db'
+   storage: __dirname + '/database.db'
 })
 
-const List = db.define('list', {
+const Lists = db.define('list', {
+
    name: {
       type: Sequelize.STRING(100),
       allowNull: false
@@ -24,5 +25,5 @@ const List = db.define('list', {
 
 module.exports = {
    db,
-   List
+   Lists
 }

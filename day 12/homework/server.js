@@ -1,10 +1,10 @@
 const express = require('express')
 const app = express()
-const router = express.Router()
+// const router = express.Router()
 
 const {
    db,
-   List
+   Lists
 } = require('./database/db.js')
 
 
@@ -15,6 +15,22 @@ app.use(express.urlencoded({
 
 app.use('/todo-list', express.static(__dirname + '/public'))
 
+app.post('/add-item', async (req, res) => {
+   let newItem = await Lists.create({
+      name: req.body.name,
+      description: req.body.description,
+   })
+
+   // console.log(newItem)
+
+   res.send(newItem)
+})
+
+app.get('/add-item', async (req, res) => {
+   let tasks = await Lists.findAll()
+
+   res.send(tasks)
+})
 
 db.sync()
    .then(() => {

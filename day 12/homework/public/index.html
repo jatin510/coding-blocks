@@ -7,14 +7,14 @@
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>TODO-LIST</title>
    <script src="jquery.js"></script>
-   <script src="main.js"></script>
+   <script defer src="main.js"></script>
 </head>
 
 <body>
 
-   <form action="/todo-list" method='POST'>
-      Tasks : <input type="text" placeholder="Enter Task" name="task" id="task">
-      Description : <input type="text" name="desc" id="desc" placeholder="Give Description...">
+   <form id="myform" method='POST' action="/add-item">
+      Tasks : <input type="text" placeholder="Enter Task" name="name" id="name">
+      Description : <input type="text" name="description" id="description" placeholder="Give Description...">
       <input type="submit">
    </form>
 
@@ -25,3 +25,10 @@
 </body>
 
 </html>
+
+
+<!-- <form id="myform"> 
+   Tasks : <input type="text" placeholder="Enter Task" name="name" id="name">
+   Description : <input type="text" name="description" id="description" placeholder="Give Description...">
+   <input type="submit" id="add" value="ADD">
+ </form> -->
