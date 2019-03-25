@@ -36,9 +36,9 @@ sort()
       console.log('really really done ' + x)
    })
 
-   .catch((x) => {
-      console.log('error' + x)
+   .catch(
+      console.log('error')
 
-   })
+   )
 
 console.log('sort ended')
