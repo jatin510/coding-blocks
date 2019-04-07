@@ -11,7 +11,7 @@ const Msgs = db.define('message', {
       allowNull: false
    },
    message: {
-      type: Sequelize.TEXT;
+      type: Sequelize.TEXT,
       allowNull: false
    }
 

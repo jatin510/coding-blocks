@@ -25,9 +25,10 @@ io.on('connection', (socket) => {
    })
 
    socket.on('chat', (data) => {
+
       io.emit('chat_recieved', {
          username: idUserMap[socket.id],
-         msg: data.msg
+         msg: data.msg,
       })
    })
 })

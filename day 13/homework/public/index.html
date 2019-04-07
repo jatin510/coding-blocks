@@ -1,19 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Chat Application</title>
+    <script src="./jquery.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./main.js"></script>
+    <link rel="stylesheet" href="bootstrap.css" />
+    <link rel="stylesheet" href="main.css" />
+  </head>
 
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>Document</title>
-   <script src="./jquery.js"></script>
-   <script src="/socket.io/socket.io.js"></script>
-   <script src="./main.js"></script>
-   <link rel="stylesheet" href="main.css">
-</head>
+  <body>
+    <br />
+    <h1 class="d-flex justify-content-center">CHAT APPLICATION</h1>
+    <br />
+    <div id="loginform" class="input-group d-flex justify-content-center">
+      <input id="username" />
+      <button id="login" class="btn btn-primary">Login</button>
+    </div>
 
-<body>
+    <div id="chats">
+      <ul id="messages"></ul>
+    </div>
 
-</body>
-
+    <div id="chatbox" class="input-group pl-2 pr-2 pb-2">
+      <input
+        id="msg"
+        type="text"
+        class="form-control"
+        placeholder="Message...."
+      />
+      <div class="input-group-append">
+        <button id="send" class="btn btn-outline-secondary" type="button">
+          Send
+        </button>
+      </div>
+    </div>
+  </body>
 </html>

@@ -70,7 +70,8 @@ app.post('/add-message', async (req, res) => {
 })
 
 
-db.sync()
+db
+   .sync()
    .then(() => {
       server.listen(5555, () => {
          console.log('connected with port 5555')

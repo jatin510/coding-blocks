@@ -10,6 +10,9 @@ app.use(express.urlencoded({
 
 app.use('/', express.static(path.join(__dirname, 'public')))
 app.use('/api', require('./routes/api').route)
+app.get('/add', (req, res) => {
+   res.send('add_products')
+})
 
 // app.use('')
 

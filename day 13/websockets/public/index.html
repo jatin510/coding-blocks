@@ -6,18 +6,27 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>Document</title>
-   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
    <script src="/socket.io/socket.io.js"></script>
-   <script src="/main.js"></script>
+   <script src="script.js"></script>
 </head>
 
 <body>
-   <h1>CHAT APP</h1>
+   <h1>Chat App</h1>
 
-   <input type="text" id="msg">
-   <button id="send">SEND</button>
+   <div id="loginform">
+      <input id="username">
+      <button id="login">Login</button>
+   </div>
 
-   <ul id="chats"></ul>
+   <div id="messages">
+      <ul id="chats"></ul>
+   </div>
+
+   <div id="chatbox">
+      <input id="msg">
+      <button id="send">SEND</button>
+   </div>
 </body>
 
 </html>
